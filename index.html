@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Podcast Project</title>
+
+        <link rel="stylesheet" href="./styles.css">
+        <script src="./script.js" defer type="module"></script>
+    </head>
+
+
+     <!--MY NAV AND HEADER-->
+     <header class="header">
+        <nav>
+            <input id="nav-toggle" type="checkbox">
+            <div class="logo"> NETLIFY ` PODCAST</div>
+            <ul class="links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Genres</a></li>
+                <li><a href="#Education">Playlist</a></li>
+                <li><a style="color: black;" href="#footer">Contact Details</a></li>
+            </ul>
+            <label for="nav-toggle" class="icon-burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </label>
+        </nav>
+
+        <div class="banner"></div>
+    </header>
+    
+    <body>
+        <podcast-app></podcast-app>
+    </body>
+</html>
