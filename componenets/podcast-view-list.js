@@ -38,7 +38,7 @@ class Component extends LitElement {
 
     static styles = css`
         li {
-            border: 1px solid var(--primary-blue);
+            border: 1px solid blue;
         }
     `;
 
