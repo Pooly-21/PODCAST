@@ -11,7 +11,7 @@ class Component extends LitElement  {
     constructor() {
         super()
 
-        this.disconnectStore = connectStore((state) => {
+        this.disconnectStore = connect((state) => {
             if (this.single === state.single) return
             this.single = state.single
         })

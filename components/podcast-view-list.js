@@ -29,7 +29,7 @@ class Component extends LitElement {
     constructor() {
         super()
         this.disconnectStore = connect((state) => {
-            if (this.previews !== state.previews) { this.previews !== state.previews }
+            if (this.previews !== state.previews) { this.previews = state.previews }
             if (this.sorting !== state.sorting) { this.sorting = state.sorting }
             if (this.search !== state.search) { this.search = state.search }
         })
@@ -72,7 +72,7 @@ class Component extends LitElement {
         /**
          * @type {import('../types').preview[]}
          */
-        const preview = this.previews
+        const previews = this.previews
 
         const filteredPreviews = previews.filter(item => {
             if (!this.search) return true
@@ -94,10 +94,10 @@ class Component extends LitElement {
      
 
         const list = sortedPreviews.map(({ title, id, updated }) => {
-            const updateAsDate = new Date(updated)
+            const date = new Date(updated)
             const day = date.getDate().toString().padStart(2, '0')
             const month = MONTHS[date.getMonth() - 1]
-            const year = date.getfullYear()
+            const year = date.getFullYear()
 
             const clickHandler = () => store.loadSingle(id)
 

@@ -13,7 +13,7 @@ class Component extends LitElement {
 
         const update = 
         
-        this.disconnectStore = connectStore((state) => {
+        this.disconnectStore = connect((state) => {
             if (this.phase === state.phase) return
             this.phase = state.phase
         })
