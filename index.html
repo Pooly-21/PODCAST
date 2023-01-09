@@ -10,7 +10,6 @@
         <script src="./script.js" defer type="module"></script>
     </head>
 
-
      <!--MY NAV AND HEADER-->
      <header class="header">
         <nav>
@@ -18,8 +17,8 @@
             <div class="logo"> NETLIFY ` PODCAST</div>
             <ul class="links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">Genres</a></li>
-                <li><a href="#Education">Playlist</a></li>
+                <li><a href="./componenets/podcast-view-list.js">Genres</a></li>
+                <li><a href="./componenets/podcast-view-single.js">Playlist</a></li>
                 <li><a style="color: black;" href="#footer">Contact Details</a></li>
             </ul>
             <label for="nav-toggle" class="icon-burger">
@@ -31,8 +30,202 @@
 
         <div class="banner"></div>
     </header>
-    
+
     <body>
         <podcast-app></podcast-app>
     </body>
 </html>
+
+
+
+<!-- Slider 
+    <section id="home">
+
+<div class="slider">
+  <div class="slide active">
+    <a href="./componenets/podcast-view-list.js">
+    <img src="images\podcastSone.webp" alt="">
+    </a>
+    <div class="info">
+      <h2> ONE </h2>
+      <p>Here we have a wide variety of podcasts and weekly updates too! , click anywhere on carousel or click on sign up above when youre done sightseeing ;) </p>
+    </div>
+  </div>
+  <div class="slide">
+    <img src="images\podcastStwo.webp" alt="">
+    <div class="info">
+      <h2> TWO</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+  </div>
+  <div class="slide">
+    <img src="images\podcastSthree.jpg" alt="">
+    <div class="info">
+      <h2> THREE </h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+  </div>
+  <div class="slide">
+    <img src="images\podcastSFour.webp" alt="">
+    <div class="info">
+      <h2> FOUR </h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+  </div>
+  <div class="slide">
+    <img src="images\podcastSFive.webp" alt="">
+    <div class="info">
+      <h2> FIVE </h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+  </div>
+  <div class="navigation">
+    <i class="fas fa-chevron-left prev-btn"></i>
+    <i class="fas fa-chevron-right next-btn"></i>
+  </div>
+  <div class="navigation-visibility">
+    <div class="slide-icon active"></div>
+    <div class="slide-icon"></div>
+    <div class="slide-icon"></div>
+    <div class="slide-icon"></div>
+    <div class="slide-icon"></div>
+  </div>
+</div>
+</section>
+
+-->
+
+<!-- Slider CSS
+    #home {
+   padding: 100px;
+   align-items: center;
+  }
+   .slider{
+     position: relative;
+     background: #000116;
+     width: 97.5%;
+     min-height: 600px;
+     margin: 20px;
+     overflow: hidden;
+     border-radius: 10px;
+   }
+   
+   .slider .slide{
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     clip-path: circle(0% at 0 50%);
+   }
+   
+   .slider .slide.active{
+     clip-path: circle(150% at 0 50%);
+     transition: 2s;
+   }
+   
+   .slider .slide img{
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+   }
+   
+   .slider .slide .info{
+     position: absolute;
+     color: #222;
+     background: rgba(255, 255, 255, 0.3);
+     width: 75%;
+     margin-top: 50px;
+     margin-left: 50px;
+     padding: 20px;
+     border-radius: 5px;
+     box-shadow: 0 5px 25px rgb(1 1 1 / 5%);
+   }
+   
+   .slider .slide .info h2{
+     font-size: 2em;
+     font-weight: 800;
+   }
+   
+   .slider .slide .info p{
+     font-size: 1em;
+     font-weight: 400;
+   }
+   
+   .navigation{
+     height: 500px;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     opacity: 0;
+     transition: opacity 0.5s ease;
+   }
+   
+   .slider:hover .navigation{
+     opacity: 1;
+   }
+   
+   .prev-btn, .next-btn{
+     z-index: 999;
+     font-size: 2em;
+     color: #222;
+     background: rgba(255, 255, 255, 0.8);
+     padding: 10px;
+     cursor: pointer;
+   }
+   
+   .prev-btn{
+     border-top-right-radius: 3px;
+     border-bottom-right-radius: 3px;
+   }
+   
+   .next-btn{
+     border-top-left-radius: 3px;
+     border-bottom-left-radius: 3px;
+   }
+   
+   .navigation-visibility{
+     z-index: 999;
+     display: flex;
+     justify-content: center;
+   }
+   
+   .navigation-visibility .slide-icon{
+     z-index: 999;
+     background: rgba(255, 255, 255, 0.5);
+     width: 20px;
+     height: 10px;
+     transform: translateY(-50px);
+     margin: 0 6px;
+     border-radius: 2px;
+     box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+   }
+   
+   .navigation-visibility .slide-icon.active{
+     background: #4285F4;
+   }
+   
+   @media (max-width: 900px){
+     .slider{
+       width: 100%;
+     }
+   
+     .slider .slide .info{
+       position: relative;
+       width: 80%;
+       margin-left: auto;
+       margin-right: auto;
+     }
+   }
+   
+   @media (max-width: 500px){
+     .slider .slide .info h2{
+       font-size: 1.8em;
+       line-height: 40px;
+     }
+   
+     .slider .slide .info p{
+       font-size: 0.9em;
+     }
+   }
+-->
+

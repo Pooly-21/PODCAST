@@ -40,6 +40,32 @@ class Component extends LitElement {
         li {
             border: 1px solid blue;
         }
+        /*{
+            text-align: center;
+            display: flex;
+        }
+        li .box{
+            display: flex;
+            flex-direction: column;
+            width: 370px;
+            height: 300px;
+            border: 1px solid rgb(0, 0, 0);
+            margin: 10px;
+            align-items: center;
+            text-align: justify;
+            padding: 10px;
+            border-radius: 15%;
+            background: linear-gradient(to top, darkorange, rgb(0, 0, 0) 50%);
+            background-size: 100% 200%;
+            transition: all .8s;
+        }
+        li .box:hover{
+            background-position: left bottom;
+            color: white;
+            border: none;
+            box-shadow: 0 0 50px darkorange;
+        }
+ */
     `;
 
     render() {
