@@ -20,7 +20,7 @@ class Component extends LitElement  {
 
     static styles = css`
         h1 {
-            color: purple;
+            color: white;
         }
 
         img {

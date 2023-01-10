@@ -38,7 +38,53 @@ class Component extends LitElement {
 
     static styles = css`
         li {
-            border: 1px solid blue;
+            color: #ffffff;
+            /* border: 1px solid white; */
+            /* 
+            display: flex;
+            flex-direction: column;
+            width: 370px;
+            height: 300px;
+            border: 1px solid rgb(0, 0, 0);
+            margin: 10px;
+            align-items: center;
+            text-align: justify;
+            padding: 10px;
+            border-radius: 15%;
+            background: linear-gradient(to top, white, rgb(0, 0, 0) 50%);
+            background-size: 100% 200%;
+            transition: all .8s; */
+        }
+        /* li :hover{
+            background-position: left bottom;
+            color: white;
+            border: none;
+            box-shadow: 0 0 50px white;
+        } */
+
+        li button{
+            margin: 10px; 
+            border: 1px solid rgb(0, 0, 0);
+            /* align-items: center;
+            text-align: justify; */
+            /* padding: 10px; */
+            border-radius: 2rem;
+            background: linear-gradient(to top, #c34a16, rgb(0, 0, 0) 50%);
+            /* background-size: 100% 200%; */
+            transition: all .8s;
+        }
+        
+        li button:hover{
+            background-position: left bottom;
+            color: white;
+            border: none;
+            box-shadow: 0 0 50px darkorange;
+        }
+        h1 {
+            margin-left: 623px;
+            font-size: 4rem;
+            color: black;
+            text-shadow:0px 0px 20px #d07954,0px 0px 20px #c34a16;
         }
         /*{
             text-align: center;

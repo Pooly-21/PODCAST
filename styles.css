@@ -7,7 +7,7 @@
 
 body {
     font-family: Roboto, Arial, Helvetica, sans-serif;
-    background: rgb(157, 127, 127);
+    background-color: black;
 }
 
 .banner {
@@ -17,6 +17,14 @@ body {
     background-position: center;
     background-attachment: fixed;
 }
+
+/* #podcast-app{
+	background-image: url('images\Popdcast_background.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100% 100%;
+} */
+
 
 /* MYNAV */
 nav {
@@ -155,6 +163,8 @@ nav .icon-burger .line {
 	position: absolute;
 	top: 0;
 	padding: 15px 30px;
+	margin-top: 150px;
+	margin-left: 230px;
   }
   
   .img-slider .slide .info h2{
